@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Content:</b>
+  <%= @miceopost.content %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @miceopost.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_miceopost_path(@miceopost) %> |
+<%= link_to 'Back', miceoposts_path %>

@@ -1,0 +1,25 @@
+<h1>Listing miceoposts</h1>
+
+<table>
+  <tr>
+    <th>Content</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @miceoposts.each do |miceopost| %>
+  <tr>
+    <td><%= miceopost.content %></td>
+    <td><%= miceopost.user_id %></td>
+    <td><%= link_to 'Show', miceopost %></td>
+    <td><%= link_to 'Edit', edit_miceopost_path(miceopost) %></td>
+    <td><%= link_to 'Destroy', miceopost, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Miceopost', new_miceopost_path %>
